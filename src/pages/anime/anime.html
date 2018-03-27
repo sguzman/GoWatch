@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <h1>{{item.animeHash.animeEps.anime.title}}</h1>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img class="album" src={{item.animeHash.animeEps.anime.img}}/>
+  <ion-list *ngFor="let ep of item.links; let i = index">
+    <ion-item>
+      <button (click)="openWatch(item)" ion-button color="secondary"> Ep {{i + 1}}</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -7,11 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {AnimeSummaryComponent} from "../components/anime-summary/anime-summary";
+import {AnimePage} from "../pages/anime/anime";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    AnimePage,
     AnimeSummaryComponent
   ],
   imports: [
@@ -22,6 +24,7 @@ import {AnimeSummaryComponent} from "../components/anime-summary/anime-summary";
   entryComponents: [
     MyApp,
     HomePage,
+    AnimePage,
     AnimeSummaryComponent
   ],
   providers: [

@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      <h1>Anime</h1>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list *ngFor="let item of shows; let i = index">
-    <anime-summary [item]="item" [idx]="i"></anime-summary>
+    <anime-summary (click)="openAnime(item)" [item]="item" [idx]="i"></anime-summary>
   </ion-list>
 </ion-content>
