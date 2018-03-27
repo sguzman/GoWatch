@@ -1,13 +1,10 @@
 anime-summary {
   .anime-cards {
     width: 20%;
-    height: 450px;
     padding: 5px;
-    margin-top: 10px;
     background-color: ghostwhite;
-    float: left;
-    position: relative;
-    padding-bottom: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .anime-cards:hover {

@@ -7,14 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Watch {{anime}} - Episode {{idx + 1}}</ion-title>
+    <ion-title>Watch {{item.animeHash.animeEps.anime.title}} - Episode {{idx + 1}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <video controls autoplay>
-    <source src={{link}} />
-  </video>
+  <div>
+    <video class="player" controls autoplay>
+      <source src={{item.links[idx]}} />
+    </video>
+    <br />
+    <span>
+      <button (click)="openWatch(item, idx - 1)" [disabled]="idx === 0" class="prev" ion-button color="primary">Previous</button>
+      <button (click)="openWatch(item, idx + 1)" [disabled]="item.links.length - 1 === idx" class="next" ion-button color="primary">Next</button>
+    </span>
+  </div>
 </ion-content>

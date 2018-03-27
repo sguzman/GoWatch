@@ -20,10 +20,9 @@ export class AnimePage {
     console.log('ionViewDidLoad AnimePage');
   }
 
-  public openWatch(item, anime, idx) {
+  public openWatch(item, idx) {
     this.navCtrl.push(WatchPage, {
-      link: item,
-      anime: anime,
+      item: item,
       idx: idx
     })
   }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AnimeLinksInterface} from "../../interfaces/animelinks.interface";
 
 /**
  * Generated class for the WatchPage page.
@@ -14,18 +15,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'watch.html',
 })
 export class WatchPage {
-  public link: string;
-  public anime: string;
+  public item: AnimeLinksInterface;
   public idx: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.link = this.navParams.get('link');
-    this.anime = this.navParams.get('anime');
+    this.item = this.navParams.get('item');
     this.idx = this.navParams.get('idx');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WatchPage');
+  }
+
+  public openWatch(item: AnimeLinksInterface, idx: number) {
+    this.navCtrl.pop();
+    this.navCtrl.push(WatchPage, {
+      item: item,
+      idx: idx
+    })
   }
 
 }
