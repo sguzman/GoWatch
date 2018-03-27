@@ -5,4 +5,17 @@ page-anime {
     margin-right: 33%;
     margin-left: 33%;
   }
+
+  ion-card {
+    padding-left: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ion-card.episode-cards {
+    ion-card-title {
+      text-align: center;
+    }
+  }
 }
