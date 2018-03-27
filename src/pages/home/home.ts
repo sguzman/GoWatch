@@ -17,7 +17,7 @@ export class HomePage {
     console.log(this.shows);
   }
 
-  public openAnime(item) {
+  public openAnime(item: AnimeLinksInterface) {
     this.navCtrl.push(AnimePage, {
       data: item
     })

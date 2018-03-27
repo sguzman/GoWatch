@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AnimeLinksInterface} from "../../interfaces/animelinks.interface";
-
-/**
- * Generated class for the AnimePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {WatchPage} from "../watch/watch";
 
 @IonicPage()
 @Component({
@@ -26,8 +20,12 @@ export class AnimePage {
     console.log('ionViewDidLoad AnimePage');
   }
 
-  public openWatch(item) {
-
+  public openWatch(item, anime, idx) {
+    this.navCtrl.push(WatchPage, {
+      link: item,
+      anime: anime,
+      idx: idx
+    })
   }
 
 }

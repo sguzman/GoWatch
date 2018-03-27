@@ -14,8 +14,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'watch.html',
 })
 export class WatchPage {
+  public link: string;
+  public anime: string;
+  public idx: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.link = this.navParams.get('link');
+    this.anime = this.navParams.get('anime');
+    this.idx = this.navParams.get('idx');
   }
 
   ionViewDidLoad() {

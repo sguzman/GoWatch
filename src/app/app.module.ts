@@ -8,12 +8,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {AnimeSummaryComponent} from "../components/anime-summary/anime-summary";
 import {AnimePage} from "../pages/anime/anime";
+import {WatchPage} from "../pages/watch/watch";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AnimePage,
+    WatchPage,
     AnimeSummaryComponent
   ],
   imports: [
@@ -25,6 +27,7 @@ import {AnimePage} from "../pages/anime/anime";
     MyApp,
     HomePage,
     AnimePage,
+    WatchPage,
     AnimeSummaryComponent
   ],
   providers: [
